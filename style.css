@@ -1,0 +1,321 @@
+body{
+	background-color:#fae3f0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+}
+.birthday-card{
+	background-color: white;
+	height: 50%;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+	font-family: "Trebuchet MS", sans-serif;
+	text-align: center;
+	box-sizing: border-box; 
+	max-width: 100%;
+	animation: fadeIn 3s;
+	width: 100%;
+	max-width: 350px;
+	
+}
+
+.birthday-card h1 {
+    font-size: 32px;
+    color: #d70742;
+	padding: 5px;
+	margin: 5px;
+}
+
+.birthday-card p {
+	line-height: 30px;
+}
+
+.birthday-card hr{
+	border: none;
+	border-top:  solid #d70742 2px ;
+	margin: 15px auto;
+	width: 90%;
+}
+	
+.birthday-card button , #show-cake , #stopflame{
+	background-color: #fadeed;
+	border-radius: 	20px;
+	padding: 15px;
+	font-family: "Trebuchet MS", sans-serif;
+	border: solid 2px #f5ebf0;
+	transition: all 0.5s ease;
+}
+
+.birthday-card button:hover , #show-cake:hover ,#stopflame:hover{
+	background-color: #f02e8f;
+	color: white;
+	transform: translateY(-3px);
+	
+}
+
+.letter{
+	background-color: white;
+	height: 50%;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+	font-family: "Trebuchet MS", sans-serif;
+	text-align: center;
+	box-sizing: border-box; 
+	max-width: 100%;
+	animation: fadeIn 3s;
+	display: none;
+	width: 100%;
+	max-width: 350px;
+}
+
+.letter h2{
+	font-size: 32px;
+    color: #d70742;
+	padding: 5px;
+	margin: 5px;
+}
+
+.hb {
+	font-size: 25px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.letter hr {
+	border: none;
+	border-top: solid 2px #d70742;
+	margin: auto ;
+	width: 95%;
+}
+
+.message-box{
+	font-size:18px;
+	font-family:"Poppins",sans-serif;
+	font-weight:400;
+	font-style: normal;
+	text-align: left
+}
+
+#confetti-section{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+}
+
+.confetti {
+	width: 10px;
+	height: 15px;
+	background-color: #E8A5C8;
+	border-radius: 3px;
+	animation: fall 2s ease-out ;
+	position: absolute;
+}
+
+#cake-section{
+	background-color: white;
+	width: 390px;
+	height: 50%;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+	font-family: "Trebuchet MS", sans-serif;
+	text-align: center;
+	box-sizing: border-box; 
+	max-width: 100%;
+	animation: fadeIn 3s;
+	display: none;
+	width: 100%;
+	max-width: 390px;
+}
+#cake-section h2 {
+	font-size: 28px;
+    color: #d70742;
+	padding: 5px;
+	margin: auto;
+}
+	
+.cake{
+	position:relative;
+	width: 230px;
+	margin:50px auto;
+}
+.cake-body{
+	width: 	200px;
+	height: 70px;
+	background-color: #fff5d9;
+	border-radius: 20px  20px 0 0;
+	margin: auto;
+	border: solid 1px #faecc5;
+}
+
+.cake-top {
+	width: 230px;
+	height: 50px;
+	background-color:#ff4d6d;
+	border-radius: 50px 50px 20px 20px;
+	margin:auto;
+	position: absolute;
+	bottom: 40px;
+}
+
+.cake-drips {
+	width: 	30px;
+	background-color: #ff4d6d;
+	border-radius: 40px 40px 50px 50px;
+	position: absolute;
+}
+
+.cake-drips.drip-left {
+	height: 45px;
+	left: 0;
+	animation: sideFlow 2s linear;
+}
+
+.cake-drips.drip-middle {
+	height: 55px;
+	left:98px;
+	animation: middleFlow 2s linear;
+}
+
+.cake-drips.drip-right {
+	height: 45px;
+	right:0;
+	animation: sideFlow 2s linear;
+}
+
+.candle{
+	width: 15px;
+	height: 40px;
+	background-color: #fae588 ;
+	border-radius: 40px 40px  0 0;
+}
+
+.candle.candle-left{
+	position: absolute;
+	left: 75px;
+	bottom: 80px;
+}
+.candle.candle-middle{
+	position: absolute;
+	left: 108px;
+	bottom: 80px;
+}
+.candle.candle-right{
+	position: absolute;
+	left: 138px;
+	bottom: 80px;
+}
+
+.flame {
+	width: 15px;
+	height: 15px;
+	background-color: #e85d04 ;
+	border-radius: 40px 0 40px 40px;
+	#transform: rotate(-45deg);
+	animation: move 1s  ease-out infinite , 
+	rotation 5s linear infinite;
+}
+
+.return {
+	background-color: #c77dff;
+	border-radius: 	20px;
+	padding: 15px;
+	font-family: "Trebuchet MS", sans-serif;
+	border: solid 2px #e7c6ff;
+	transition: all 0.5s ease;
+	text-align: left;
+	position: absolute;
+	top: 10px;
+	left: 5px;
+}
+
+.return:hover{
+	background-color: #5a189a;
+	color: white;
+	transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fall{
+	from{
+		transform: translateY(-20px);
+	}
+	to {
+		transform: translateY(100vh);
+	}
+}
+@keyframes move{
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.4) ;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes rotation{
+	0%{
+		rotate: -90deg;
+	}
+	50%{
+		rotate: 0deg;
+	}
+	100%{
+		rotate: -90deg;
+	}
+}
+@keyframes sideFlow{
+	from{
+		height:0;
+	}
+	to{
+		height:45px
+	}
+}
+
+@keyframes middleFlow{
+	from{
+		height:0;
+	}
+	to{
+		height:55px
+	}
+}
+
+@media (max-width: 400px) {
+    .birthday-card,
+    .letter,
+    #cake-section {
+        padding: 20px;
+    }
+
+    .birthday-card h1,
+    .letter h2 {
+        font-size: 27px;
+    }
+
+    .message-box {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
