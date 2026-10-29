@@ -47,6 +47,7 @@ body{
 	font-family: "Trebuchet MS", sans-serif;
 	border: solid 2px #f5ebf0;
 	transition: all 0.5s ease;
+	color: black;
 }
 
 .birthday-card button:hover , #show-cake:hover ,#stopflame:hover{
@@ -226,6 +227,7 @@ body{
 
 .return {
 	background-color: #c77dff;
+	color:black;
 	border-radius: 	20px;
 	padding: 15px;
 	font-family: "Trebuchet MS", sans-serif;
